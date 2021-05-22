@@ -356,12 +356,14 @@ public class Register {
 					int age = keyboard.nextInt();
 					System.out.print("사고 유무가 있으신가요? (Y/N) : ");
 					String acc = keyboard.nextLine();
+					keyboard.nextLine();
 					boolean accident;
 					if(acc.equals("Y")) accident = true;
 					else accident = false;
 					System.out.print("보험금 납입을 시작할 날짜를 입력해주세요 (yyyy-mm-dd) : ");
 					String start_date = keyboard.nextLine();
 					person.setStartDate(start_date);
+					System.out.println("고객님의 정보가 입력되었습니다. 결과를 산출 중이니 잠시만 기다려주세요.. ");
 					switch(productchoice) {
 					case 1:{
 						Product user = new Hyundai(age, accident);
@@ -406,7 +408,12 @@ public class Register {
 					
 					}
 				
+			}else {
+				System.out.println("감사합니다 고객님. 아쉽지만 다음에 또 뵙겠습니다");
+				System.exit(0);  
 			}
+				
+				
 		}
 		
 	}
