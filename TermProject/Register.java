@@ -10,31 +10,31 @@ class Info{
    private String name;
    private String birth;
    private String product;
-   private String start_date;  // º¸Çè °¡ÀÔ ³¯Â¥ (=º¸Çè ½ÃÀÛÇÏ´Â ³¯Â¥ ) <- »ç¿ëÀÚ·ÎºÎÅÍ ÀÔ·Â¹Ş¾Æ¼­ ÀúÀå     //³ªÁß¿¡ º¸Çè ÇØÁö°¡ °¡´ÉÇÑÁö ¿©ºÎ ÆÇ´ÜÇÒ ¶§ ´Ş·Â¿¡¼­ ÇöÀç ³¯Â¥ ºÒ·¯¿Í¼­ ºñ±³
-   private double duration; // º¸Çè À¯È¿ ±â°£  - º¸Çè È¸»ç ¸¶´Ù ´Ù¸£°Ô ¼³Á¤ - º¸ÇèÀ» º¸Àå¹Ş´Â ±â°£ (³³ÀÔ±â°£°ú ´Ù¸§)
-   private double pay_duration; // º¸Çè ³³ÀÔ ±â°£ (º¸Çè·á¸¦ ³³ÀÔÇÏ´Â ±â°£/ ¿¹¸¦ µé¾î ³³ÀÔ±â°£ÀÌ 10³â, º¸Çè±â°£ÀÌ 20³âÀÏ °æ¿ì º¸Çè·á´Â 10³â µ¿¾È¸¸ ³»°í 20³â µ¿¾È º¸Àå ¹ŞÀ½) 
-   private String due_date;  // º¸Çè ¸¸·á ³¯Â¥ ( º¸Çè °¡ÀÔ ³¯Â¥ + duration = º¸Çè ¸¸·á ³¯Â¥ )
-   static private int numberOfCustomer=0; // ÃÑ µî·ÏµÈ °í°´ ¼ö (ÇÑ¸íÀÌ ½Å±Ôµî·ÏÇÒ ¶§¸¶´Ù 1Áõ°¡)
-   private double total_insurance_pay;  // ÃÑ º¸Çè·á (³ªÀÌ¿¡ µû¶ó, ÇöÀç±îÁö »ç°í °æÇè À¯¹«¿¡ µû¶ó Â÷µî ¼³Á¤)
+   private String start_date;  // ë³´í—˜ ê°€ì… ë‚ ì§œ (=ë³´í—˜ ì‹œì‘í•˜ëŠ” ë‚ ì§œ ) <- ì‚¬ìš©ìë¡œë¶€í„° ì…ë ¥ë°›ì•„ì„œ ì €ì¥     //ë‚˜ì¤‘ì— ë³´í—˜ í•´ì§€ê°€ ê°€ëŠ¥í•œì§€ ì—¬ë¶€ íŒë‹¨í•  ë•Œ ë‹¬ë ¥ì—ì„œ í˜„ì¬ ë‚ ì§œ ë¶ˆëŸ¬ì™€ì„œ ë¹„êµ
+   private double duration; // ë³´í—˜ ìœ íš¨ ê¸°ê°„  - ë³´í—˜ íšŒì‚¬ ë§ˆë‹¤ ë‹¤ë¥´ê²Œ ì„¤ì • - ë³´í—˜ì„ ë³´ì¥ë°›ëŠ” ê¸°ê°„ (ë‚©ì…ê¸°ê°„ê³¼ ë‹¤ë¦„)
+   private double pay_duration; // ë³´í—˜ ë‚©ì… ê¸°ê°„ (ë³´í—˜ë£Œë¥¼ ë‚©ì…í•˜ëŠ” ê¸°ê°„/ ì˜ˆë¥¼ ë“¤ì–´ ë‚©ì…ê¸°ê°„ì´ 10ë…„, ë³´í—˜ê¸°ê°„ì´ 20ë…„ì¼ ê²½ìš° ë³´í—˜ë£ŒëŠ” 10ë…„ ë™ì•ˆë§Œ ë‚´ê³  20ë…„ ë™ì•ˆ ë³´ì¥ ë°›ìŒ) 
+   private String due_date;  // ë³´í—˜ ë§Œë£Œ ë‚ ì§œ ( ë³´í—˜ ê°€ì… ë‚ ì§œ + duration = ë³´í—˜ ë§Œë£Œ ë‚ ì§œ )
+   static private int numberOfCustomer=0; // ì´ ë“±ë¡ëœ ê³ ê° ìˆ˜ (í•œëª…ì´ ì‹ ê·œë“±ë¡í•  ë•Œë§ˆë‹¤ 1ì¦ê°€)
+   private double total_insurance_pay;  // ì´ ë³´í—˜ë£Œ (ë‚˜ì´ì— ë”°ë¼, í˜„ì¬ê¹Œì§€ ì‚¬ê³  ê²½í—˜ ìœ ë¬´ì— ë”°ë¼ ì°¨ë“± ì„¤ì •)
    private double fee;
-   /* °í°´ ÀÌ¸§ ¸®ÅÏ ÇÔ¼ö */
+   /* ê³ ê° ì´ë¦„ ë¦¬í„´ í•¨ìˆ˜ */
    public String getname() {
       return name;
    }
-   /* °í°´ »ı³â¿ùÀÏ ¸®ÅÏ ÇÔ¼ö */
+   /* ê³ ê° ìƒë…„ì›”ì¼ ë¦¬í„´ í•¨ìˆ˜ */
    public String getbirth() {
       return birth;
    }
-   /* ½Å±Ô °í°´ÀÌ ÇÑ¸í Ãß°¡µÉ ¶§¸¶´Ù ÀüÃ¼ °í°´ ¼ö 1Áõ°¡  */
+   /* ì‹ ê·œ ê³ ê°ì´ í•œëª… ì¶”ê°€ë  ë•Œë§ˆë‹¤ ì „ì²´ ê³ ê° ìˆ˜ 1ì¦ê°€  */
    static public void addgetNumber() {
       numberOfCustomer++;
    }
-   /* ÀüÃ¼ µî·ÏµÈ °í°´ ¼ö ¸®ÅÏ */
-   static public int getNumber() {      // °í°´ ¼ö ¸®ÅÏ get
+   /* ì „ì²´ ë“±ë¡ëœ ê³ ê° ìˆ˜ ë¦¬í„´ */
+   static public int getNumber() {      // ê³ ê° ìˆ˜ ë¦¬í„´ get
       return numberOfCustomer;
    }
    /* name, birth setter  */
-   public void setBasicInfo(String name, String birth) {   // ÀÌ¸§/»ı³â¿ùÀÏ set
+   public void setBasicInfo(String name, String birth) {   // ì´ë¦„/ìƒë…„ì›”ì¼ set
       this.name = name;
       this.birth = birth;
    }
@@ -57,7 +57,7 @@ class Info{
   
    /* due_date setter */
    public void setDueDate() {
-      /* String À¸·Î ÀÔ·Â¹ŞÀº start_date¸¦ Á¤¼ö·Î ¹Ù²Û µÚ + duration ÇØ¼­ ³â/¿ù/ÀÏ ·Î due_date °è»êÇØ¼­ °ª ¼³Á¤ÇÏ±â */
+      /* String ìœ¼ë¡œ ì…ë ¥ë°›ì€ start_dateë¥¼ ì •ìˆ˜ë¡œ ë°”ê¾¼ ë’¤ + duration í•´ì„œ ë…„/ì›”/ì¼ ë¡œ due_date ê³„ì‚°í•´ì„œ ê°’ ì„¤ì •í•˜ê¸° */
    }
    
 }
@@ -65,9 +65,9 @@ class Info{
 class Age{
    private static double ageValue=0;
    public static double byAge(int age) {
-      // °è»ê½Ä¿¡ µé¾î°¡´Â ¾ËÆÄ °ªÀ» ³ªÀÌº°·Î ´Ù¸£°Ô Á¤ÇØ¼­ ¸®ÅÏ 
+      // ê³„ì‚°ì‹ì— ë“¤ì–´ê°€ëŠ” ì•ŒíŒŒ ê°’ì„ ë‚˜ì´ë³„ë¡œ ë‹¤ë¥´ê²Œ ì •í•´ì„œ ë¦¬í„´ 
       switch(age/10) {
-      case 2: {  // 20´ë
+      case 2: {  // 20ëŒ€
          if(age < 25 ) {
             ageValue = 0.4;
             return ageValue;
@@ -78,7 +78,7 @@ class Age{
          }
          break;
       }
-      case 3: {   // 30´ë
+      case 3: {   // 30ëŒ€
          if(age < 35 ) {
             ageValue = 0.35;
             return ageValue;
@@ -97,7 +97,7 @@ class Age{
          else if( age >= 45 ) {
             ageValue = 0.25;
             return ageValue;
-         }// 40´ë
+         }// 40ëŒ€
          break;
       }
       case 5: {
@@ -108,7 +108,7 @@ class Age{
          else if( age >= 55 ) {
             ageValue = 0.35;
             return ageValue;
-         }// 50´ë
+         }// 50ëŒ€
          break;
       }
       case 6: {
@@ -119,10 +119,10 @@ class Age{
          else if( age >= 65 ) {
             ageValue = 0.4;
             return ageValue;
-         }// 60´ë
+         }// 60ëŒ€
          break;
       }
-      case 7:    // ±× ÀÌ»ó
+      case 7:    // ê·¸ ì´ìƒ
       default:{
          if(age < 75 ) {
             ageValue = 0.4;
@@ -143,7 +143,7 @@ class Age{
 }
 class Accident{
 	private static double weight;
-	public static double byAccident(boolean accident) { // »ç°í À¯¹« ÀÖÀ» °æ¿ì °¡ÁßÄ¡ 
+	public static double byAccident(boolean accident) { // ì‚¬ê³  ìœ ë¬´ ìˆì„ ê²½ìš° ê°€ì¤‘ì¹˜ 
 		if(accident==true) {
 			weight= 0.3;
 			return weight;
@@ -156,8 +156,8 @@ class Accident{
 	}
 }
 class Product{
-   private int age;  // »ç¿ëÀÚ ³ªÀÌ
-   private boolean accident; // »ç°í À¯¹«
+   private int age;  // ì‚¬ìš©ì ë‚˜ì´
+   private boolean accident; // ì‚¬ê³  ìœ ë¬´
    private double fee;
    int base;
    double ageAlpha;// = Age.byAge(age);
@@ -183,21 +183,21 @@ class Product{
    public void calculate() {
       //double ageAlpha = Age.byAge(age);
       //double weight;
-      //double fee=0; //°í°´º°·Î »êÁ¤µÈ º¸Çè±İ¾×
-       //°¢ È¸»çÀÇ ±âº» º¸Çè±İ¾×
+      //double fee=0; //ê³ ê°ë³„ë¡œ ì‚°ì •ëœ ë³´í—˜ê¸ˆì•¡
+       //ê° íšŒì‚¬ì˜ ê¸°ë³¸ ë³´í—˜ê¸ˆì•¡
       
    }
-   /* ¿À¹ö¶óÀÌµù */
+   /* ì˜¤ë²„ë¼ì´ë”© */
    public void set(Info person) {
       
    }
    
 }
 
-/* Çö´ëÇØ»ó º¸Çè È¸»ç */
+/* í˜„ëŒ€í•´ìƒ ë³´í—˜ íšŒì‚¬ */
 class Hyundai extends Product{
    
-   /* »ı¼ºÀÚ - ³ªÀÌ, »ç°íÀ¯¹« set */
+   /* ìƒì„±ì - ë‚˜ì´, ì‚¬ê³ ìœ ë¬´ set */
    public Hyundai(int age, boolean accident) {
       super.setAge(age);
       super.setAccident(accident);
@@ -205,15 +205,15 @@ class Hyundai extends Product{
    @Override
    public void set(Info person) {
       person.setProduct("Hyundai");
-      person.setPayDuration(10);   // ÀÓÀÇ·Î Á¤ÇÔ
-      person.setDuration(20);   // ÀÓÀÇ·Î Á¤ÇÔ
+      person.setPayDuration(10);   // ì„ì˜ë¡œ ì •í•¨
+      person.setDuration(20);   // ì„ì˜ë¡œ ì •í•¨
    }
    public void calculate()
    {
 	   int base = 11000;
 	   double fee = base + base*ageAlpha+ base*weightVal;
 	   System.out.println();
-	   System.out.println("°í°´´ÔÀÇ º¸Çè ³³ÀÔ¾×Àº "+fee+"¿ø À¸·Î »êÁ¤µÇ¾ú½À´Ï´Ù.");
+	   System.out.println("ê³ ê°ë‹˜ì˜ ë³´í—˜ ë‚©ì…ì•¡ì€ "+fee+"ì› ìœ¼ë¡œ ì‚°ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	   setFee(fee);
 	   System.out.println("===========================================");
 	   System.out.println();
@@ -221,10 +221,10 @@ class Hyundai extends Product{
    
    
 }
-/* »ï¼ºÈ­Àç º¸Çè È¸»ç */
+/* ì‚¼ì„±í™”ì¬ ë³´í—˜ íšŒì‚¬ */
 class Samsung extends Product{
    
-   /* »ı¼ºÀÚ - ³ªÀÌ, »ç°íÀ¯¹« set */
+   /* ìƒì„±ì - ë‚˜ì´, ì‚¬ê³ ìœ ë¬´ set */
    public Samsung(int age, boolean accident) {
       super.setAge(age);
       super.setAccident(accident);
@@ -239,17 +239,17 @@ class Samsung extends Product{
       int base = 12000;
       double fee = base + base*ageAlpha+ base*weightVal;
       System.out.println();
-      System.out.println("°í°´´ÔÀÇ º¸Çè ³³ÀÔ¾×Àº "+fee+"¿ø À¸·Î »êÁ¤µÇ¾ú½À´Ï´Ù.");
+      System.out.println("ê³ ê°ë‹˜ì˜ ë³´í—˜ ë‚©ì…ì•¡ì€ "+fee+"ì› ìœ¼ë¡œ ì‚°ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
       setFee(fee);
       System.out.println("===========================================");
       System.out.println();
    }
    
 }
-/* DB¼ÕÇØº¸Çè º¸Çè È¸»ç */
+/* DBì†í•´ë³´í—˜ ë³´í—˜ íšŒì‚¬ */
 class DB extends Product{
    
-   /* »ı¼ºÀÚ - ³ªÀÌ, »ç°íÀ¯¹« set */
+   /* ìƒì„±ì - ë‚˜ì´, ì‚¬ê³ ìœ ë¬´ set */
    public DB(int age, boolean accident) {
       super.setAge(age);
       super.setAccident(accident);
@@ -264,17 +264,17 @@ class DB extends Product{
       int base = 10000;
       double fee = base + base*ageAlpha+ base*weightVal;
       System.out.println();
-      System.out.println("°í°´´ÔÀÇ º¸Çè ³³ÀÔ¾×Àº "+fee+"¿ø À¸·Î »êÁ¤µÇ¾ú½À´Ï´Ù.");
+      System.out.println("ê³ ê°ë‹˜ì˜ ë³´í—˜ ë‚©ì…ì•¡ì€ "+fee+"ì› ìœ¼ë¡œ ì‚°ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
       setFee(fee);
       System.out.println("===========================================");
       System.out.println();
    }
    
 }
-/* ¸Ş¸®Ã÷È­Àç º¸Çè È¸»ç */
+/* ë©”ë¦¬ì¸ í™”ì¬ ë³´í—˜ íšŒì‚¬ */
 class Meritz extends Product{
    
-   /* »ı¼ºÀÚ - ³ªÀÌ, »ç°íÀ¯¹« set */
+   /* ìƒì„±ì - ë‚˜ì´, ì‚¬ê³ ìœ ë¬´ set */
    public Meritz(int age, boolean accident) {
       super.setAge(age);
       super.setAccident(accident);
@@ -289,17 +289,17 @@ class Meritz extends Product{
       int base = 13000;
       double fee = base + base*ageAlpha+ base*weightVal;
       System.out.println();
-      System.out.println("°í°´´ÔÀÇ º¸Çè ³³ÀÔ¾×Àº "+fee+"¿ø À¸·Î »êÁ¤µÇ¾ú½À´Ï´Ù.");
+      System.out.println("ê³ ê°ë‹˜ì˜ ë³´í—˜ ë‚©ì…ì•¡ì€ "+fee+"ì› ìœ¼ë¡œ ì‚°ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
       setFee(fee);
       System.out.println("===========================================");
       System.out.println();
    }
    
 }
-/* KB¼ÕÇØº¸Çè º¸Çè È¸»ç */
+/* KBì†í•´ë³´í—˜ ë³´í—˜ íšŒì‚¬ */
 class KB extends Product{
    
-   /* »ı¼ºÀÚ - ³ªÀÌ, »ç°íÀ¯¹« set */
+   /* ìƒì„±ì - ë‚˜ì´, ì‚¬ê³ ìœ ë¬´ set */
    public KB(int age, boolean accident) {
       super.setAge(age);
       super.setAccident(accident);
@@ -314,17 +314,17 @@ class KB extends Product{
       int base = 14000;
       double fee = base + base*ageAlpha+ base*weightVal;
       System.out.println();
-      System.out.println("°í°´´ÔÀÇ º¸Çè ³³ÀÔ¾×Àº "+fee+"¿ø À¸·Î »êÁ¤µÇ¾ú½À´Ï´Ù.");
+      System.out.println("ê³ ê°ë‹˜ì˜ ë³´í—˜ ë‚©ì…ì•¡ì€ "+fee+"ì› ìœ¼ë¡œ ì‚°ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
       setFee(fee);
       System.out.println("===========================================");
       System.out.println();
    }
    
 }
-/* AXA¼ÕÇØº¸Çè º¸Çè È¸»ç */
+/* AXAì†í•´ë³´í—˜ ë³´í—˜ íšŒì‚¬ */
 class AXA extends Product{
    
-   /* »ı¼ºÀÚ - ³ªÀÌ, »ç°íÀ¯¹« set */
+   /* ìƒì„±ì - ë‚˜ì´, ì‚¬ê³ ìœ ë¬´ set */
    public AXA(int age, boolean accident) {
       super.setAge(age);
       super.setAccident(accident);
@@ -339,17 +339,17 @@ class AXA extends Product{
       int base = 16000;
       double fee = base + base*ageAlpha+ base*weightVal;
       System.out.println();
-      System.out.println("°í°´´ÔÀÇ º¸Çè ³³ÀÔ¾×Àº "+fee+"¿ø À¸·Î »êÁ¤µÇ¾ú½À´Ï´Ù.");
+      System.out.println("ê³ ê°ë‹˜ì˜ ë³´í—˜ ë‚©ì…ì•¡ì€ "+fee+"ì› ìœ¼ë¡œ ì‚°ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
       setFee(fee);
       System.out.println("===========================================");
       System.out.println();
    }
    
 }
-/* ÇÑÈ­¼ÕÇØº¸Çè º¸Çè È¸»ç */
+/* í•œí™”ì†í•´ë³´í—˜ ë³´í—˜ íšŒì‚¬ */
 class Hanwha extends Product{
    
-   /* »ı¼ºÀÚ - ³ªÀÌ, »ç°íÀ¯¹« set */
+   /* ìƒì„±ì - ë‚˜ì´, ì‚¬ê³ ìœ ë¬´ set */
    public Hanwha(int age, boolean accident) {
       super.setAge(age);
       super.setAccident(accident);
@@ -364,17 +364,17 @@ class Hanwha extends Product{
       int base = 12000;
       double fee = base + base*ageAlpha+ base*weightVal;
       System.out.println();
-      System.out.println("°í°´´ÔÀÇ º¸Çè ³³ÀÔ¾×Àº "+fee+"¿ø À¸·Î »êÁ¤µÇ¾ú½À´Ï´Ù.");
+      System.out.println("ê³ ê°ë‹˜ì˜ ë³´í—˜ ë‚©ì…ì•¡ì€ "+fee+"ì› ìœ¼ë¡œ ì‚°ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
       setFee(fee);
       System.out.println("===========================================");
       System.out.println();
    }
    
 }
-/* NH³óÇù¼ÕÇØº¸Çè º¸Çè È¸»ç */
+/* NHë†í˜‘ì†í•´ë³´í—˜ ë³´í—˜ íšŒì‚¬ */
 class NH extends Product{
    
-   /* »ı¼ºÀÚ - ³ªÀÌ, »ç°íÀ¯¹« set */
+   /* ìƒì„±ì - ë‚˜ì´, ì‚¬ê³ ìœ ë¬´ set */
    public NH(int age, boolean accident) {
       super.setAge(age);
       super.setAccident(accident);
@@ -389,7 +389,7 @@ class NH extends Product{
       int base = 11000;
       double fee = base + base*ageAlpha+ base*weightVal;
       System.out.println();
-      System.out.println("°í°´´ÔÀÇ º¸Çè ³³ÀÔ¾×Àº "+fee+"¿ø À¸·Î »êÁ¤µÇ¾ú½À´Ï´Ù.");
+      System.out.println("ê³ ê°ë‹˜ì˜ ë³´í—˜ ë‚©ì…ì•¡ì€ "+fee+"ì› ìœ¼ë¡œ ì‚°ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
       setFee(fee);
       System.out.println("===========================================");
       System.out.println();
@@ -398,16 +398,16 @@ class NH extends Product{
 }
 
 
-/* ¸ŞÀÎ Å¬·¡½º */
+/* ë©”ì¸ í´ë˜ìŠ¤ */
 public class Register {
    static ArrayList <Info> user = new ArrayList<>(100);    
-   /* ÀüÃ¼ ¸®½ºÆ®¿¡ °í°´ Á¤º¸ ÀúÀå */
+   /* ì „ì²´ ë¦¬ìŠ¤íŠ¸ì— ê³ ê° ì •ë³´ ì €ì¥ */
    public static void store_info(Info person) {
       user.add(person);
       Info.addgetNumber();
    }
 
-   /* ±âÁ¸¿¡ ÀÌ¹Ì µî·ÏµÇÀÖ´Â °í°´ÀÎÁö È®ÀÎ */
+   /* ê¸°ì¡´ì— ì´ë¯¸ ë“±ë¡ë˜ìˆëŠ” ê³ ê°ì¸ì§€ í™•ì¸ */
    public static int searchUser(Info search) {   
       int count = Info.getNumber();
       int i;
@@ -432,76 +432,93 @@ public class Register {
       Loop1:
       for(;;)
       {
-         System.out.print("°í°´´ÔÀÇ ¼ºÇÔÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+         System.out.print("ê³ ê°ë‹˜ì˜ ì„±í•¨ì„ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
          String name = keyboard.nextLine();
-         System.out.println("°í°´´ÔÀÇ »ı³â¿ùÀÏÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä (yyyy/mm/dd) : ");
+         System.out.println("ê³ ê°ë‹˜ì˜ ìƒë…„ì›”ì¼ì„ ì…ë ¥í•´ì£¼ì„¸ìš” (yyyy/mm/dd) : ");
          String birth = keyboard.nextLine();
 
          Info person = new Info();
          
          person.setBasicInfo(name, birth);
-         System.out.println("°í°´´ÔÀÇ Á¤º¸°¡ ÀÔ·ÂµÇ¾ú½À´Ï´Ù. Àá½Ã¸¸ ±â´Ù·ÁÁÖ¼¼¿ä...\n");
+         System.out.println("ê³ ê°ë‹˜ì˜ ì •ë³´ê°€ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤. ì ì‹œë§Œ ê¸°ë‹¤ë ¤ì£¼ì„¸ìš”...\n");
 
-         /* °í°´ÀÌ ÀÌ¹Ì µî·ÏµÇ¾îÀÖ´Â °æ¿ì */
+         /* ê³ ê°ì´ ì´ë¯¸ ë“±ë¡ë˜ì–´ìˆëŠ” ê²½ìš° */
          if(searchUser(person)==-1) {
-            System.out.println("ÀÌ¹Ì µî·ÏÇÏ½Å °í°´ÀÔ´Ï´Ù.");
-            System.out.println("< 1. ÇöÀç ³» Á¤º¸ È®ÀÎ >\t<2. º¸Çè ÇØÁö>\t<3. Á¾·á>");
+            System.out.println("ì´ë¯¸ ë“±ë¡í•˜ì‹  ê³ ê°ì…ë‹ˆë‹¤.");
+            System.out.println("< 1. í˜„ì¬ ë‚´ ì •ë³´ í™•ì¸ >\t<2. ë³´í—˜ í•´ì§€>\t<3. ì¢…ë£Œ>");
             System.out.print("=> ");
             int select = keyboard.nextInt();
             if(select==1) {
-
+		    int count = Info.getNumber();
+		    int i;
+		    System.out.println("ê³ ê°ë‹˜ì˜ ê°€ì… ì •ë³´ì…ë‹ˆë‹¤.");
+		    for(i=0; i<count; i++)
+		    {
+			    if(person.getname().equals(user.get(i).getname()) && person.getbirth().equals(user.get(i).gerbirth()));
+			    System.out.println("ì´ë¦„: " + user.get(i).getname() + "\nìƒë…„ì›”ì¼" + user.get(i).getbirth());
+			    System.out.println("ê°€ì… ì¤‘ì¸ ë³´í—˜: ");
+		    }
+		    break Loop1;
             }
             else if(select == 2) {
-
+		    int i;
+		    for(i=0; i<count; i++)
+		    {
+			    if(person.getname().equals(user.get(i).getname()) && person.getbirth().equals(user.get(i).gerbirth()));
+			    System.out.println(user.get(i).getname() + " ê³ ê°ë‹˜ì˜ ìë£Œê°€ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤. ");
+			    System.out.println("ê°ì‚¬í•©ë‹ˆë‹¤ ê³ ê°ë‹˜. ì•„ì‰½ì§€ë§Œ ë‹¤ìŒì— ë˜ ëµ™ê² ìŠµë‹ˆë‹¤.");
+		    }
+		    user.remove(i);
+		    break;
             }
             else {
-               System.out.println("ÇÁ·Î±×·¥ÀÌ Á¾·áµÇ¾ú½À´Ï´Ù. ÀúÈñ ¼­ºñ½º¼¾ÅÍ¸¦ ¹æ¹®ÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù.");
+               System.out.println("í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. ì €í¬ ì„œë¹„ìŠ¤ì„¼í„°ë¥¼ ë°©ë¬¸í•´ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤.");
                break Loop1;
             }
-         } /* °í°´ÀÌ ÀÌ¹Ì µî·ÏµÇÁö ¾ÊÀº, ½Å±Ô°í°´ÀÏ °æ¿ì */
+         } /* ê³ ê°ì´ ì´ë¯¸ ë“±ë¡ë˜ì§€ ì•Šì€, ì‹ ê·œê³ ê°ì¼ ê²½ìš° */
          else {
-            System.out.println("*** È¯¿µÇÕ´Ï´Ù " + person.getname()+"´Ô! ¿îÀüÀÚ º¸Çè °¡ÀÔÀ» ÇÏ½Ã°Ú½À´Ï±î? ***");
-            System.out.print("(³×/¾Æ´Ï¿À)·Î ÀÔ·Â¹Ù¶ø´Ï´Ù. => ");
+            System.out.println("*** í™˜ì˜í•©ë‹ˆë‹¤ " + person.getname()+"ë‹˜! ìš´ì „ì ë³´í—˜ ê°€ì…ì„ í•˜ì‹œê² ìŠµë‹ˆê¹Œ? ***");
+            System.out.print("(ë„¤/ì•„ë‹ˆì˜¤)ë¡œ ì…ë ¥ë°”ëë‹ˆë‹¤. => ");
             String want = keyboard.nextLine();
 
-            if(want.equals("³×")) {
+            if(want.equals("ë„¤")) {
                store_info(person);
                int productchoice;
                try {
             	  System.out.println();
-                  System.out.println("1. Çö´ëÇØ»ó 2. »ï¼ºÈ­Àç 3. DB¼ÕÇØº¸Çè 4. ¸Ş¸®Ã÷È­Àç 5. KB¼ÕÇØº¸Çè 6. AXA¼ÕÇØº¸Çè 7. ÇÑÈ­¼ÕÇØº¸Çè 8. NH³óÇù¼ÕÇØº¸Çè");
+                  System.out.println("1. í˜„ëŒ€í•´ìƒ 2. ì‚¼ì„±í™”ì¬ 3. DBì†í•´ë³´í—˜ 4. ë©”ë¦¬ì¸ í™”ì¬ 5. KBì†í•´ë³´í—˜ 6. AXAì†í•´ë³´í—˜ 7. í•œí™”ì†í•´ë³´í—˜ 8. NHë†í˜‘ì†í•´ë³´í—˜");
                   System.out.print("=> ");
                   productchoice = keyboard.nextInt();
-                  if(productchoice > 8) throw new Exception("Á¸ÀçÇÏÁö ¾Ê´Â »óÇ°ÀÔ´Ï´Ù!! ¹øÈ£¸¦ ´Ù½Ã ÀÔ·ÂÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+                  if(productchoice > 8) throw new Exception("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ìƒí’ˆì…ë‹ˆë‹¤!! ë²ˆí˜¸ë¥¼ ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
                }catch(Exception e) {
                   System.out.println(e); 
-                  System.out.println("1. Çö´ëÇØ»ó 2. »ï¼ºÈ­Àç 3. DB¼ÕÇØº¸Çè 4. ¸Ş¸®Ã÷È­Àç 5. KB¼ÕÇØº¸Çè 6. AXA¼ÕÇØº¸Çè 7. ÇÑÈ­¼ÕÇØº¸Çè 8. NH³óÇù¼ÕÇØº¸Çè");
+                  System.out.println("1. í˜„ëŒ€í•´ìƒ 2. ì‚¼ì„±í™”ì¬ 3. DBì†í•´ë³´í—˜ 4. ë©”ë¦¬ì¸ í™”ì¬ 5. KBì†í•´ë³´í—˜ 6. AXAì†í•´ë³´í—˜ 7. í•œí™”ì†í•´ë³´í—˜ 8. NHë†í˜‘ì†í•´ë³´í—˜");
                   System.out.print("=> ");
                   productchoice = keyboard.nextInt();
                   if(productchoice > 8) {
-                  System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â »óÇ°ÀÔ´Ï´Ù!! ÇÁ·Î±×·¥ÀÌ Á¾·áµÇ¾ú½À´Ï´Ù.");
+                  System.out.println("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ìƒí’ˆì…ë‹ˆë‹¤!! í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
                   break Loop1;
                   }
                }
                
                Product user= new Product();
 
-               System.out.print("³ªÀÌ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+               System.out.print("ë‚˜ì´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
                int age = keyboard.nextInt();
                user.setAge(age);
                            
-               System.out.print("»ç°í À¯¹«°¡ ÀÖÀ¸½Å°¡¿ä? (Y/N) : ");
+               System.out.print("ì‚¬ê³  ìœ ë¬´ê°€ ìˆìœ¼ì‹ ê°€ìš”? (Y/N) : ");
                boolean acc=false;
                String accident = keyboard.next();
                if(accident.equals("Y")) acc = true;
                else acc = false;
                user.setAccident(acc);
                keyboard.nextLine();
-               System.out.println("º¸Çè±İ ³³ÀÔÀ» ½ÃÀÛÇÒ ³¯Â¥¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä (yyyy-mm-dd) : ");
+               System.out.println("ë³´í—˜ê¸ˆ ë‚©ì…ì„ ì‹œì‘í•  ë‚ ì§œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” (yyyy-mm-dd) : ");
                String start_date = keyboard.nextLine();
                person.setStartDate(start_date);
                
-               System.out.println("°í°´´ÔÀÇ Á¤º¸°¡ ÀÔ·ÂµÇ¾ú½À´Ï´Ù. °á°ú¸¦ »êÃâ ÁßÀÌ´Ï Àá½Ã¸¸ ±â´Ù·ÁÁÖ¼¼¿ä.. ");
+               System.out.println("ê³ ê°ë‹˜ì˜ ì •ë³´ê°€ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤. ê²°ê³¼ë¥¼ ì‚°ì¶œ ì¤‘ì´ë‹ˆ ì ì‹œë§Œ ê¸°ë‹¤ë ¤ì£¼ì„¸ìš”.. ");
                Product newUser = null;
                
                switch(productchoice) {
@@ -567,7 +584,7 @@ public class Register {
                break;
                
          }else {
-            System.out.println("°¨»çÇÕ´Ï´Ù °í°´´Ô. ¾Æ½±Áö¸¸ ´ÙÀ½¿¡ ¶Ç ºË°Ú½À´Ï´Ù");
+            System.out.println("ê°ì‚¬í•©ë‹ˆë‹¤ ê³ ê°ë‹˜. ì•„ì‰½ì§€ë§Œ ë‹¤ìŒì— ë˜ ëµ™ê² ìŠµë‹ˆë‹¤");
             break;
          }
             
